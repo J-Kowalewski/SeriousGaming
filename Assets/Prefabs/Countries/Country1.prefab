@@ -47,5 +47,5 @@ MonoBehaviour:
   name: Ardonia
   awareness: 30
   destruction: 0
-  flag: {fileID: 21300000, guid: 604b6468a29d9c5439c49992ada37fcc, type: 3}
+  flag: {fileID: -1977949253, guid: 2f27020db1298694699be7f2fc8b3fcc, type: 3}
   actions: []
