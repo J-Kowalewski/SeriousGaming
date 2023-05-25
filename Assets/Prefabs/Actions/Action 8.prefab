@@ -44,14 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aad85315b3802409ecedd727a726ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Template 8
+  name: Cutting environmental R&D expenses
   difficulty: 55
   factor: 5
-  goodFlavorText: -------------
+  goodFlavorText: 'Congratulations! You successfully cut all government funding to
+    R&D facilities: climate change grows ever more rampant.'
   goodImage: {fileID: 21300000, guid: 516e00a4e6053324290f70dad2c2a1cd, type: 3}
   goodResult: 30
   goodColor: {r: 0, g: 1, b: 0, a: 1}
-  badFlavorText: ------------------
+  badFlavorText: "Bad news for you\u2026 Popular uprisings forced you to keep funding
+    R&D facilities, making things harder. "
   badImage: {fileID: 21300000, guid: 747334d303b29744da967aea0ee914f6, type: 3}
   badResult: 25
   badColor: {r: 1, g: 0, b: 0, a: 1}

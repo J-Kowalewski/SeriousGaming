@@ -44,18 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aad85315b3802409ecedd727a726ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Construction of a mega-factory
+  name: Fake news in media
   difficulty: 65
   factor: 5
-  goodFlavorText: "You decide to allow the construction of the mega-factory. As a
-    result, the country\u2019s pollution rates more than double, but you manage to
-    keep it a secret from the other nations\u2019 leaders. \r"
+  goodFlavorText: You successfully managed to spread fake news about the cause of
+    climate change.
   goodImage: {fileID: 21300000, guid: 516e00a4e6053324290f70dad2c2a1cd, type: 3}
   goodResult: 25
   goodColor: {r: 0, g: 1, b: 0, a: 1}
-  badFlavorText: Despite your best efforts, the guard remains steadfast in their
-    duty. Your attempt at bribery has failed, and now the consequences of your actions
-    are felt. Perhaps a different approach is needed
+  badFlavorText: 'Oops! The media found out about your lies: your disinformation
+    campaign failed!'
   badImage: {fileID: 21300000, guid: 747334d303b29744da967aea0ee914f6, type: 3}
   badResult: 20
   badColor: {r: 1, g: 0, b: 0, a: 1}

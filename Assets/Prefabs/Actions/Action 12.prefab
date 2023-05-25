@@ -44,14 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aad85315b3802409ecedd727a726ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Template 12
+  name: Silencing Climate Research
   difficulty: 45
   factor: 10
-  goodFlavorText: -----------------------
+  goodFlavorText: Great job, president! The authors have been deterred from publishing
+    studies on climate change - which hampers the public awareness and slows down
+    progress in addressing climate change.
   goodImage: {fileID: 21300000, guid: 516e00a4e6053324290f70dad2c2a1cd, type: 3}
   goodResult: 50
   goodColor: {r: 0, g: 1, b: 0, a: 1}
-  badFlavorText: ------------------------------
+  badFlavorText: "I\u2019m sorry, president. Your pressure on the scientific authors
+    has failed. The authors found ways to publish their studies - which highlight
+    the urgency of addressing environmental challenges to the public."
   badImage: {fileID: 21300000, guid: 747334d303b29744da967aea0ee914f6, type: 3}
   badResult: 45
   badColor: {r: 1, g: 0, b: 0, a: 1}

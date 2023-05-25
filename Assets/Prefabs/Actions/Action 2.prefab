@@ -47,15 +47,13 @@ MonoBehaviour:
   name: Emission report manipulation
   difficulty: 60
   factor: 5
-  goodFlavorText: Through skillful manipulation of emission data, the country eluded
-    detection by other countries, successfully maintaining the appearance of lower
-    emissions and avoiding suspicion.
+  goodFlavorText: Through manipulation of emission data, you eluded detection by
+    other countries.
   goodImage: {fileID: 21300000, guid: 516e00a4e6053324290f70dad2c2a1cd, type: 3}
   goodResult: 40
   goodColor: {r: 0, g: 1, b: 0, a: 1}
-  badFlavorText: A vigilant politician scrutinized the country's data. Discrepancies
-    were found that directly contradicted the emission data claims. The discovery
-    of the damning evidence  resulted in severe repercussions imposed by other countries.
+  badFlavorText: "A scientist figured out your scheme and published an article containing
+    the original emission report: complete failure!\r"
   badImage: {fileID: 21300000, guid: 747334d303b29744da967aea0ee914f6, type: 3}
   badResult: 20
   badColor: {r: 1, g: 0, b: 0, a: 1}

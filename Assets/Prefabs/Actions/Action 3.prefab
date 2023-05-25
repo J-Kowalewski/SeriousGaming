@@ -44,17 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aad85315b3802409ecedd727a726ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Deforestation Policy
+  name: Climate Education Censorship
   difficulty: 60
   factor: 5
-  goodFlavorText: The bulldozers of the municipality razed hectares and hectares
-    of forest to the ground within a few days, and huge concrete condominiums have
-    taken the place of uncontaminated nature. The expansion was successful.
+  goodFlavorText: You managed to successfully change the school curriculum, removing
+    all information about climate change.
   goodImage: {fileID: 21300000, guid: 516e00a4e6053324290f70dad2c2a1cd, type: 3}
   goodResult: 40
   goodColor: {r: 0, g: 1, b: 0, a: 1}
-  badFlavorText: Your proposal has stirred up the population, which has rebelled
-    by organizing anti-regime demonstrations that forced you to give up the proposal.
+  badFlavorText: Some professors discovered the change in the education curriculum
+    and started protesting about these changes.
   badImage: {fileID: 21300000, guid: 747334d303b29744da967aea0ee914f6, type: 3}
   badResult: 20
   badColor: {r: 1, g: 0, b: 0, a: 1}
