@@ -146,6 +146,11 @@ public class GameLoop : MonoBehaviour
         {
             Country country = countriesContainer.transform.GetChild(i).GetComponent<Country>();
             country.destruction += (100 - country.awareness) / 5;
+            if (country.destruction >= 100)
+            {
+                print(country.name + " - destroyed");
+            }
+            country.destruction = Mathf.Clamp(country.destruction, 0, 100);
         }
     }
     public void NextTurn()
