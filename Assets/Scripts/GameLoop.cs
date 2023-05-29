@@ -76,7 +76,7 @@ public class GameLoop : MonoBehaviour
             country.awareness = Mathf.Clamp(country.awareness, 0, 100);
         }
     }
-    private void ResetActions()
+    private void ResetCountries()
     {
         for (int i = 0; i < countriesContainer.transform.childCount; i++)
         {
@@ -92,6 +92,9 @@ public class GameLoop : MonoBehaviour
 
                 x.actions.Add(action);
             }
+
+            x.transform.Find("BarAwareness").gameObject.GetComponent<Image>().fillAmount = x.awareness / 100f;
+            x.transform.Find("BarDestruction").gameObject.GetComponent<Image>().fillAmount = x.destruction / 100f;
         }
     }
     private void ResetActionButtons()
@@ -157,7 +160,7 @@ public class GameLoop : MonoBehaviour
     {
         ChangeAwareness();
         ChangeDestruction();
-        ResetActions();
+        ResetCountries();
         ResetActionButtons();
         ResetTexts();
     }

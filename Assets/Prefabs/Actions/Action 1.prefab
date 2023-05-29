@@ -49,12 +49,12 @@ MonoBehaviour:
   factor: 5
   goodFlavorText: You successfully bribed the journalists and they agreed to spread
     fake news about the cause of environmental damage
-  goodImage: {fileID: 21300000, guid: 516e00a4e6053324290f70dad2c2a1cd, type: 3}
+  goodImage: {fileID: 21300000, guid: 4d70c4f8e009cab43ad1301136a52a0e, type: 3}
   goodResult: 40
   goodColor: {r: 0, g: 1, b: 0, a: 1}
   badFlavorText: "One of the journalists didn\u2019t accept the bribe and outed you
     to the other countries.\r"
-  badImage: {fileID: 21300000, guid: 747334d303b29744da967aea0ee914f6, type: 3}
+  badImage: {fileID: 21300000, guid: b1ffbcacf7da7f5438a1bb609c1e70e7, type: 3}
   badResult: 20
   badColor: {r: 1, g: 0, b: 0, a: 1}
   selected: 0

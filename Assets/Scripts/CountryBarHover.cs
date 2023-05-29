@@ -14,21 +14,21 @@ public class CountryBarHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
     private GameObject bar;
     void Start()
     {
-        bar = transform.Find("Bar").gameObject;
-        color = bar.GetComponent<Image>().color;
+        /*bar = transform.Find("Bar").gameObject;
+        color = bar.GetComponent<Image>().color;*/
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        float r = color.r * factor;
+        /*float r = color.r * factor;
         float g = color.g * factor;
         float b = color.b * factor;
 
-        bar.GetComponent<Image>().color = new Color(r,g,b);
+        bar.GetComponent<Image>().color = new Color(r,g,b);*/
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        bar.GetComponent<Image>().color = color;
+        /*bar.GetComponent<Image>().color = color;*/
     }
 }

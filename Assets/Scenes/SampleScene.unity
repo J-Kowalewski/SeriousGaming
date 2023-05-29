@@ -134,18 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountryButton (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 2290085128456452077, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: awarenessText
-      value: 
-      objectReference: {fileID: 769015862}
-    - target: {fileID: 2290085128456452077, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: destructionText
-      value: 
-      objectReference: {fileID: 1667023760}
-    - target: {fileID: 2290085128456452077, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: actionsContainer
-      value: 
-      objectReference: {fileID: 271264350}
     - target: {fileID: 4511173815707704062, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -234,26 +222,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Country 3
       objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728876, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 193.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728876, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000022888184
-      objectReference: {fileID: 0}
     - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
       propertyPath: m_Type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1796306603, guid: 2f27020db1298694699be7f2fc8b3fcc, type: 3}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
 --- !u!1 &101718059
@@ -1484,7 +1460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -352.47, y: 0}
+  m_AnchoredPosition: {x: 313.93, y: 0}
   m_SizeDelta: {x: 467.8513, y: 55.5803}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769015864
@@ -1691,7 +1667,7 @@ PrefabInstance:
 
 
         Result
-        Bad?'
+        Bad'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50aafb1a96af1149ad3203e3de674c5, type: 3}
@@ -1711,26 +1687,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountryButton (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1097974816769556470, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097974816769556470, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -8.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290085128456452077, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: awarenessText
-      value: 
-      objectReference: {fileID: 769015862}
-    - target: {fileID: 2290085128456452077, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: destructionText
-      value: 
-      objectReference: {fileID: 1667023760}
-    - target: {fileID: 2290085128456452077, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: actionsContainer
-      value: 
-      objectReference: {fileID: 271264350}
     - target: {fileID: 4511173815707704062, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1819,33 +1775,17 @@ PrefabInstance:
       propertyPath: m_text
       value: Country 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728876, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 193.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728876, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
-      objectReference: {fileID: 0}
     - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
       propertyPath: m_Type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1172740595, guid: 2f27020db1298694699be7f2fc8b3fcc, type: 3}
     - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_FillCenter
+      propertyPath: m_Maskable
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_UseSpriteMesh
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
@@ -2209,7 +2149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 352.47, y: -0.0000076294}
+  m_AnchoredPosition: {x: -313.93, y: 0}
   m_SizeDelta: {x: 467.8513, y: 55.5803}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667023762
@@ -2403,6 +2343,20 @@ PrefabInstance:
     - target: {fileID: 2498955859526357848, guid: b50aafb1a96af1149ad3203e3de674c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651719574950050992, guid: b50aafb1a96af1149ad3203e3de674c5, type: 3}
+      propertyPath: m_text
+      value: 'Action 1 Name
+
+
+        Difficulty
+
+
+        Result Good
+
+
+        Result
+        Bad'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50aafb1a96af1149ad3203e3de674c5, type: 3}
@@ -2600,30 +2554,6 @@ PrefabInstance:
     - target: {fileID: 4511173815707704062, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1977949253, guid: 2f27020db1298694699be7f2fc8b3fcc, type: 3}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8550758895076728879, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
-      propertyPath: m_PixelsPerUnitMultiplier
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d711c9a6b9eeda49aa76573eb8f7306, type: 3}
@@ -2845,7 +2775,7 @@ PrefabInstance:
 
 
         Result
-        Bad?'
+        Bad'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50aafb1a96af1149ad3203e3de674c5, type: 3}

@@ -37,9 +37,10 @@ public class Assigning : MonoBehaviour
             x.flag = country.flag;
 
             countryButton.transform.Find("Text (TMP)").gameObject.GetComponent<TextMeshProUGUI>().text = x.name;
-            countryButton.transform.Find("Image").gameObject.GetComponent<Image>().sprite = x.flag;
+            countryButton.transform.Find("Image/Flag").gameObject.GetComponent<Image>().sprite = x.flag;
 
-            countryButton.transform.Find("Bar").gameObject.GetComponent<Image>().fillAmount = x.awareness / 100f;
+            countryButton.transform.Find("BarAwareness").gameObject.GetComponent<Image>().fillAmount = x.awareness / 100f;
+            countryButton.transform.Find("BarDestruction").gameObject.GetComponent<Image>().fillAmount = x.destruction / 100f;
 
             for (int j = 0; j < actionsContainer.transform.childCount; j++)
             {

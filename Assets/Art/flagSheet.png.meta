@@ -141,9 +141,9 @@ TextureImporter:
       name: flagSheet_1
       rect:
         serializedVersion: 2
-        x: 307
+        x: 308
         y: 753
-        width: 179
+        width: 178
         height: 203
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
