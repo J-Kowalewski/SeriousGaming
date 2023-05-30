@@ -10,7 +10,10 @@ public class CountryButtonClick : MonoBehaviour
 	private GameObject destructionText;
 	private GameObject actionsContainer;
 
-	private GameObject gameController;
+    public AudioSource soundEffect;
+
+
+    private GameObject gameController;
 	void Start()
 	{
 		gameController = GameObject.Find("GameController");
@@ -26,6 +29,8 @@ public class CountryButtonClick : MonoBehaviour
 
 	void TaskOnClick()
 	{
+        soundEffect.Play();
+
         if (gameController.GetComponent<GameData>().activeCountryButton != null)
         {
 			gameController.GetComponent<GameData>().activeCountryButton.GetComponent<Image>().color = Color.white;

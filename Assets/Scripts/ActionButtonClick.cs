@@ -7,17 +7,24 @@ public class ActionButtonClick : MonoBehaviour
 {
 	Action action;
 	GameObject gameController;
+
+    public AudioSource soundEffect;
+
 	void Start()
 	{
 		Button btn = GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
 
 		gameController = GameObject.Find("GameController");
+
 	}
 
 	void TaskOnClick()
     {
 		GameObject activeCountry = gameController.GetComponent<GameData>().activeCountryButton;
+
+        soundEffect.Play();
+
         if (activeCountry != null)
         {
 			action = GetComponent<Action>();

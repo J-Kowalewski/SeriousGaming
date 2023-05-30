@@ -18,6 +18,9 @@ public class GameLoop : MonoBehaviour
 
     private int destructionCounter = 0;
     private bool countryAware = false;
+
+    public AudioSource successfulSoundEffect;
+    public AudioSource failSoundEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,8 @@ public class GameLoop : MonoBehaviour
                         popup.transform.Find("Image").GetComponent<Image>().sprite = action.goodImage;
                         popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = action.goodFlavorText;
                         popup.transform.Find("Results").GetComponent<TMPro.TextMeshProUGUI>().text = $"<color=#{ColorUtility.ToHtmlStringRGBA(action.goodColor)}>" + country.name +": -"+action.goodResult+"% Awareness" + "</color>";
+
+                        successfulSoundEffect.Play();
                     }
                     else
                     {
@@ -73,6 +78,8 @@ public class GameLoop : MonoBehaviour
                         popup.transform.Find("Image").GetComponent<Image>().sprite = action.badImage;
                         popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = action.badFlavorText;
                         popup.transform.Find("Results").GetComponent<TMPro.TextMeshProUGUI>().text = $"<color=#{ColorUtility.ToHtmlStringRGBA(action.badColor)}>" + country.name + ": +" + action.badResult + "% Awareness" + "</color>";
+
+                        failSoundEffect.Play();
 
                     }
                     break;
@@ -147,6 +154,7 @@ public class GameLoop : MonoBehaviour
         Country country = GetComponent<GameData>().activeCountryButton.GetComponent<Country>();
         awarenessText.GetComponent<TMPro.TextMeshProUGUI>().text = "Awareness: " + country.awareness + "%";
         destructionText.GetComponent<TMPro.TextMeshProUGUI>().text = "Destruction: " + country.destruction + "%";
+
     }
     private void ChangeDestruction()
     {
