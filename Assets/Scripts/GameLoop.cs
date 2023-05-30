@@ -8,12 +8,16 @@ public class GameLoop : MonoBehaviour
     GameObject countriesContainer;
     GameObject actionsContainer;
     GameObject popupTemplate;
+    GameObject endPopup;
     List<Action> actionPool;
 
     private List<Action> actions;
 
     private GameObject awarenessText;
     private GameObject destructionText;
+
+    private int destructionCounter = 0;
+    private bool countryAware = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,7 @@ public class GameLoop : MonoBehaviour
         popupTemplate = GetComponent<Assigning>().popupTemplate;
         awarenessText = GetComponent<Assigning>().awarenessText;
         destructionText = GetComponent<Assigning>().destructionText;
+        endPopup = GetComponent<Assigning>().endPopupTemplate;
     }
     private void ChangeAwareness()
     {
@@ -42,7 +47,7 @@ public class GameLoop : MonoBehaviour
                     //TODO: calculated difficulty - for now base diff
                     // calculated difficulty = diffculty - destruction/factor
                     double calculatedDiff = action.difficulty - (country.destruction/action.factor);
-
+                    print(calculatedDiff);
 
                     GameObject popup = Instantiate(popupTemplate, new Vector3(0,6), Quaternion.identity);
                     popup.transform.SetParent(GameObject.Find("Canvas").transform, false);
@@ -74,6 +79,7 @@ public class GameLoop : MonoBehaviour
                 }
             }
             country.awareness = Mathf.Clamp(country.awareness, 0, 100);
+            if (country.awareness >= 100) countryAware = true;
         }
     }
     private void ResetCountries()
@@ -148,20 +154,65 @@ public class GameLoop : MonoBehaviour
         for (int i = 0; i < countriesContainer.transform.childCount; i++)
         {
             Country country = countriesContainer.transform.GetChild(i).GetComponent<Country>();
-            country.destruction += (100 - country.awareness) / 5;
-            if (country.destruction >= 100)
+            if (country.destruction < 100)
             {
-                print(country.name + " - destroyed");
+                country.destruction += (100 - country.awareness) / 5;
+                if (country.destruction >= 100)
+                {
+                    print(country.name + " - destroyed");
+                    destructionCounter++;
+                }
+                country.destruction = Mathf.Clamp(country.destruction, 0, 100);
             }
-            country.destruction = Mathf.Clamp(country.destruction, 0, 100);
+        }
+    }
+    private void CheckForEnding()
+    {
+        if(countryAware || destructionCounter >= 3 || GetComponent<GameData>().turnCounter > 10)
+        {
+            GameObject popup = Instantiate(endPopup, new Vector3(0, 6), Quaternion.identity);
+            EndingPopUpData popupData = popup.GetComponent<EndingPopUpData>();
+
+            popup.transform.SetParent(GameObject.Find("Canvas").transform, false);
+            popup.name = "endingPopUp";
+
+            if (countryAware)
+            {
+                //1 country awareness>=100 -> lose
+                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.loseName;
+                popup.transform.Find("Image").GetComponent<Image>().sprite = popupData.loseImage;
+                popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.loseText;
+            }
+            else if (destructionCounter >= 3)
+            {
+                //3 countries destroyed ->win
+                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.winName;
+                popup.transform.Find("Image").GetComponent<Image>().sprite = popupData.winImage;
+                popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.winText;
+            }
+            else if (GetComponent<GameData>().turnCounter > 10)
+            {
+                //turn>10 -> failsafe lose
+                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.failsafeName;
+                popup.transform.Find("Image").GetComponent<Image>().sprite = popupData.failsafeImage;
+                popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.failsafeText;
+            }
         }
     }
     public void NextTurn()
     {
-        ChangeAwareness();
-        ChangeDestruction();
-        ResetCountries();
-        ResetActionButtons();
-        ResetTexts();
+        if (GetComponent<GameData>().actionsLeft == 0)
+        {
+            ChangeAwareness();
+            ChangeDestruction();
+            ResetCountries();
+            ResetActionButtons();
+            ResetTexts();
+            CheckForEnding();
+        }
+        else
+        {
+            print("You need to select 3 actions");
+        }
     }
 }

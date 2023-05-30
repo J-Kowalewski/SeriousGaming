@@ -11,6 +11,7 @@ public class Assigning : MonoBehaviour
     public GameObject actionsIndicator;
     public GameObject turnsIndicator;
     public GameObject popupTemplate;
+    public GameObject endPopupTemplate;
     public GameObject awarenessText;
     public GameObject destructionText;
 
