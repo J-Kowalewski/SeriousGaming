@@ -55,11 +55,11 @@ public class GameLoop : MonoBehaviour
                     GameObject popup = Instantiate(popupTemplate, new Vector3(0,6), Quaternion.identity);
                     popup.transform.SetParent(GameObject.Find("Canvas").transform, false);
                     popup.name = "popup" + i;
-                   /* popup.transform.position.Set(0, 6, 0);*/
 
                     if (rand <= calculatedDiff) //Success
                     {
                         country.awareness += -country.awareness * action.goodResult / 100;
+                        /*country.awareness += -action.goodResult;*/
                         print(country.name + " - " + action.name + " - " + "Succesful: -" + action.goodResult);
 
                         popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = $"<color=#{ColorUtility.ToHtmlStringRGBA(action.goodColor)}>" + action.name + "</color>";
@@ -72,6 +72,7 @@ public class GameLoop : MonoBehaviour
                     else
                     {
                         country.awareness += country.awareness * action.badResult / 100;
+                        /*country.awareness += action.badResult;*/
                         print(country.name + " - " + action.name + " - " + "Failed: +" + action.badResult);
 
                         popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = $"<color=#{ColorUtility.ToHtmlStringRGBA(action.badColor)}>" + action.name + "</color>";
@@ -187,21 +188,21 @@ public class GameLoop : MonoBehaviour
             if (countryAware)
             {
                 //1 country awareness>=100 -> lose
-                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.loseName;
+                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = $"<color=red>" + popupData.loseName + "</color>";
                 popup.transform.Find("Image").GetComponent<Image>().sprite = popupData.loseImage;
                 popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.loseText;
             }
             else if (destructionCounter >= 3)
             {
                 //3 countries destroyed ->win
-                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.winName;
+                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = $"<color=green>" + popupData.winName + "</color>";
                 popup.transform.Find("Image").GetComponent<Image>().sprite = popupData.winImage;
                 popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.winText;
             }
             else if (GetComponent<GameData>().turnCounter > 10)
             {
                 //turn>10 -> failsafe lose
-                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.failsafeName;
+                popup.transform.Find("PopUpTop/EventName").GetComponent<TMPro.TextMeshProUGUI>().text = $"<color=yellow>" + popupData.failsafeName + "</color>";
                 popup.transform.Find("Image").GetComponent<Image>().sprite = popupData.failsafeImage;
                 popup.transform.Find("FlavorText").GetComponent<TMPro.TextMeshProUGUI>().text = popupData.failsafeText;
             }
@@ -222,5 +223,11 @@ public class GameLoop : MonoBehaviour
         {
             print("You need to select 3 actions");
         }
+        /*ChangeAwareness();
+        ChangeDestruction();
+        ResetCountries();
+        ResetActionButtons();
+        ResetTexts();
+        CheckForEnding();*/
     }
 }

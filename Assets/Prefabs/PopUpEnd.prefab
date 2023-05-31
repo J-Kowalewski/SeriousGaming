@@ -128,7 +128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000030518}
+  m_AnchoredPosition: {x: 0, y: -0.000030517}
   m_SizeDelta: {x: 616.9397, y: 57.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5234542765045107963
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bribe Journalists
+  m_text: YOU LOSE!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6cab8f421815b114e802ae04c1876777, type: 2}
   m_sharedMaterial: {fileID: -155244292764440803, guid: 6cab8f421815b114e802ae04c1876777, type: 2}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -5.40094}
+  m_margin: {x: 0, y: 4.9677734, z: 0, w: -10.368652}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
